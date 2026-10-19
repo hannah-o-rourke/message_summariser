@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🧵 Catch-Up Summariser - Chat Hackers</title>
+<style>
+  :root { color-scheme: light; --bg: #fbf6ee; --card: #ffffff; --text: #1f1a17; --muted: #5f5650; --accent: #5b3cc4; --border: #e8dfd2; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { color-scheme: dark; --bg: #17141a; --card: #211d25; --text: #f3eef6; --muted: #c4bbc9; --accent: #b6a3ff; --border: #3a3440; }
+  }
+  :root[data-theme="dark"] { color-scheme: dark; --bg: #17141a; --card: #211d25; --text: #f3eef6; --muted: #c4bbc9; --accent: #b6a3ff; --border: #3a3440; }
+  body { margin: 0; font-family: ui-rounded, system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+  .banner { background: linear-gradient(120deg, #5b3cc4, #e8577d); color: #fff; border-radius: 20px; padding: 24px 22px; }
+  h1 { margin: 0 0 6px; font-size: 1.8rem; }
+  section { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 18px 20px; margin-top: 16px; }
+  h2 { font-size: 1.15rem; margin: 0 0 8px; }
+  code { background: var(--bg); border-radius: 6px; padding: 1px 6px; }
+  li { margin: 4px 0; }
+  .muted { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <header class="banner">
+    <h1>🧵 Catch-Up Summariser</h1>
+    <p>When a group chat gets really busy, this posts a short summary once things calm down, so anyone who missed it can catch up.</p>
+  </header>
+  <section>
+    <h2>In the group</h2>
+    <ul>
+      <li><code>!catchup</code> summarises the last 3 hours (<code>!catchup 6h</code>, <code>!catchup 30m</code>, up to 24 hours)</li>
+      <li><code>!catchup off</code> / <code>!catchup on</code> stops or starts automatic summaries</li>
+      <li>React ❌ to any catch-up message to keep your messages out of summaries, ✅ to come back in</li>
+      <li><code>!catchup help</code> explains it all again</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Privacy and fairness</h2>
+    <ul>
+      <li>Only <em>when</em> messages are sent is stored, to spot busy periods. What people write is never stored.</li>
+      <li>To make a summary, the busy period's messages are sent to Anthropic's Claude with phone numbers and emails removed. Only the summary is posted.</li>
+      <li>Views are never tied to names, disagreements are described evenly, and names are only used for who's doing what.</li>
+      <li>Every summary says it's AI-made and shows message times, so people can check the original wording.</li>
+    </ul>
+    <p class="muted">Part of Chat Hackers.</p>
+  </section>
+</main>
+</body>
+</html>
